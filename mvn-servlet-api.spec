@@ -4,10 +4,14 @@
 #
 Name     : mvn-servlet-api
 Version  : 2.5.20081211
-Release  : 2
+Release  : 3
 URL      : https://repo1.maven.org/maven2/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.jar
 Source0  : https://repo1.maven.org/maven2/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.jar
-Source1  : https://repo1.maven.org/maven2/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.pom
+Source1  : https://repo.maven.apache.org/maven2/javax/servlet/servlet-api/2.3/servlet-api-2.3.jar
+Source2  : https://repo.maven.apache.org/maven2/javax/servlet/servlet-api/2.3/servlet-api-2.3.pom
+Source3  : https://repo1.maven.org/maven2/javax/servlet/servlet-api/2.3/servlet-api-2.3.jar
+Source4  : https://repo1.maven.org/maven2/javax/servlet/servlet-api/2.3/servlet-api-2.3.pom
+Source5  : https://repo1.maven.org/maven2/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -30,10 +34,22 @@ data components for the mvn-servlet-api package.
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/javax/servlet/servlet-api/2.3
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/javax/servlet/servlet-api/2.3/servlet-api-2.3.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/javax/servlet/servlet-api/2.3
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/javax/servlet/servlet-api/2.3/servlet-api-2.3.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/javax/servlet/servlet-api/2.3
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/javax/servlet/servlet-api/2.3/servlet-api-2.3.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/javax/servlet/servlet-api/2.3
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/javax/servlet/servlet-api/2.3/servlet-api-2.3.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.pom
 
 
 %files
@@ -41,5 +57,7 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/mortbay/jetty/servl
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/javax/servlet/servlet-api/2.3/servlet-api-2.3.jar
+/usr/share/java/.m2/repository/javax/servlet/servlet-api/2.3/servlet-api-2.3.pom
 /usr/share/java/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.jar
 /usr/share/java/.m2/repository/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.pom
