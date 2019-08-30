@@ -4,7 +4,7 @@
 #
 Name     : mvn-servlet-api
 Version  : 2.5.20081211
-Release  : 5
+Release  : 6
 URL      : https://repo1.maven.org/maven2/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.jar
 Source0  : https://repo1.maven.org/maven2/org/mortbay/jetty/servlet-api/2.5-20081211/servlet-api-2.5-20081211.jar
 Source1  : https://repo1.maven.org/maven2/org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar
